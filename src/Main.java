@@ -39,10 +39,14 @@ public class Main {
         System.out.println("Length of first line: " + len1);
         System.out.println("Length of second line: " + len2);
 
-        if (Double.compare(len1, len2) == 0) {
+        int comparison = Double.compare(len1, len2);
+
+        if (comparison == 0) {
             System.out.println("The lines are equal.");
+        } else if (comparison > 0) {
+            System.out.println("The first line is greater.");
         } else {
-            System.out.println("The lines are not equal.");
+            System.out.println("The second line is greater.");
         }
 
         sc.close();
